@@ -24,7 +24,7 @@ const Banner = () => {
   // console.log(currentSlide);
   return (
     <div className="w-full h-auto overflow-x-hidden">
-      <div className="w-screen h-[650px] relative">
+      <div className="w-screen 2xl:h-[1100px] xl:h-[900px] lg:h-[700px] md:h-auto relative">
         <div
           style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
           className="w-[400vw] h-full flex transition-transform duration-1000"

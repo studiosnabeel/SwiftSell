@@ -4,7 +4,7 @@ import { logo, cartlogo } from '../assets/index';
 const Header = () => {
   return (
     <div
-      className="w-full h-20 bg-white border-b-[1px] border-b-primary flex justify-between items-center px-14 font-titleFont
+      className="w-full h-20 bg-white border-b-[1px] border-b-primary flex justify-between items-center px-14 font-titleFont sticky top-0 z-50
     "
     >
       <div>
