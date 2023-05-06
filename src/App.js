@@ -1,9 +1,12 @@
 import React from 'react';
+import Home from './pages/Home';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-green-600">Welcome to Swift Sell</h1>
+    <div className="font-bodyFont">
+      <Header />
+      <Home />
     </div>
   );
 }
