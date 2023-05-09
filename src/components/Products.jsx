@@ -1,10 +1,11 @@
 import React from 'react';
 import ProductsCard from './ProductsCard';
 
-const Products = () => {
+const Products = ({ products }) => {
+  // console.log(products);
   return (
     <div className="py-10">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl bg-primary hover:bg-secondary active:bg-black duration-[250ms] text-white py-2 w-80 text-center">
           Shop Now
         </h1>
@@ -16,8 +17,10 @@ const Products = () => {
           and more, at competitive prices that you won't find anywhere else.
         </p>
       </div>
-      <div className="max-w-screen-xl mx-aut0">
-        <ProductsCard />
+      <div className="max-w-screen-xl mx-auto py-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-10 ">
+        {products.map((item) => (
+          <ProductsCard key={item._id} product={item} />
+        ))}
       </div>
     </div>
   );
