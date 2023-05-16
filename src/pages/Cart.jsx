@@ -32,7 +32,7 @@ const Cart = () => {
   };
   return (
     <div>
-      <div className="m-4 p-6 flex 2xl:flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-col justify-between">
+      <div className="m-4 p-6 flex 2xl:flex-row xl:flex-col lg:flex-col max-[639px]:flex-col md:flex-col sm:flex-col justify-between">
         <div className="basis-1/2 mb-6">
           <CartItem />
         </div>
