@@ -17,17 +17,20 @@ const CartItem = () => {
       <div className="w-full ">
         <h2 className="font-titleFont text-xl">shopping cart</h2>
       </div>
-      <div>
+      <div className='flex-wrap'>
         {productData.map((item) => (
           <div
             key={item._id}
             className="flex items-center justify-between gap-6 mt-6"
           >
-            <div className="flex items-center gap-2">
+            <div className='flex max-[850px]:flex-col gap-6'>
+            <div className="w-[70%] flex items-center justify-center gap-2">
+            <div className='flex justify-center items-center gap-2'>
               <div
                 className="text-base text-gray-600 hover:text-red-600 cursor-pointer duration-300
               "
               >
+                
                 <MdOutlineClose
                   onClick={() =>
                     dispatch(deleteItem(item._id)) &&
@@ -43,9 +46,10 @@ const CartItem = () => {
                 />
               </div>
             </div>
-            <h2 className="text-sm w-52">{item.title}</h2>
+            <h2 className="text-sm w-52 text-center">{item.title}</h2>
             <p className="w-10">${item.price}</p>
-            <div className="flex gap-4">
+            </div>
+            <div className="w-[30%] flex gap-4 items-center">
               <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
                 <p className="text-sm">Quantity</p>
                 <div className="flex items-center gap-4 text-sm font-semibold">
@@ -86,8 +90,11 @@ const CartItem = () => {
                   </button>
                 </div>
               </div>
-            </div>
             <p className="w-14 mx-4">${item.quantity * item.price}</p>
+            </div>   
+            </div>
+
+           
           </div>
         ))}
       </div>
